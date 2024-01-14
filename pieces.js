@@ -35,3 +35,23 @@ for (let idArticle = 0; idArticle < pieces.length; idArticle++) {
   articleElement.appendChild(categorieElement);
   articleElement.appendChild(descriptionElement);
 }
+
+const boutonTrier = document.querySelector(".btn-trier");
+boutonTrier.addEventListener("click", ()=> {
+    pieces.sort((a, b) => {
+        return a.prix - b.prix;
+    });
+    console.log(pieces);
+});
+
+const boutonFiltrer = document.querySelector(".btn-filtrer");
+boutonFiltrer.addEventListener("click", () => {
+   const piecesFiltrees = pieces.filter(piece => piece.prix <= 35);
+  console.log(piecesFiltrees);
+});
+
+const noms = pieces.map(pieceMap => pieceMap.nom);
+console.log(noms);
+
+piece => piece.nom
+console.log(piece);
