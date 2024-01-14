@@ -2,7 +2,8 @@
 const reponse = await fetch("pieces-autos.json");
 const pieces = await reponse.json();
 
-///
+/// ordonne ce code 
+
 for (let idArticle = 0; idArticle < pieces.length; idArticle++) {
   const article = pieces[idArticle];
   const sectionFiches = document.querySelector(".fiches");
@@ -53,5 +54,3 @@ boutonFiltrer.addEventListener("click", () => {
 const noms = pieces.map(pieceMap => pieceMap.nom);
 console.log(noms);
 
-piece => piece.nom
-console.log(piece);
